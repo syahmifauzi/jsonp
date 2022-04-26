@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON Parser</title>
+  </head>
+  <body>
+    <p>Send a POST request to this endpoint with the following JSON body</p>
+    <pre>
+      {
+        "inArguments": [
+          {
+            "message": "Hello telcowin this is a test",
+            "from": "01234567890",
+            "to": "0199999999"
+          }
+        ],
+        "activityObjectID": "7d3a5a3e-9717-40fe-b2f1-e72270e3e950",
+        "journeyId": "18297097-9f4f-4eb1-810e-8507ad4ecc6b",
+        "activityId": "7d3a5a3e-9717-40fe-b2f1-e72270e3e950",
+        "definitionInstanceId": "d26ad8fc-b9c3-4f4b-b709-bce185d9cd14",
+        "activityInstanceId": "512277ab-9a44-4fcf-883f-473e52c7fb98",
+        "keyValue": "telcowin@telcowin.com",
+        "mode": 0
+      }
+    </pre>
+    <p>
+      The response will be anything in "inArguments" first object. In our case,
+      it will be:
+    </p>
+    <pre>
+      {
+        "message": "Hello telcowin this is a test",
+        "from": "01234567890",
+        "to": "0199999999"
+      }
+    </pre>
+    <p>
+      Before sending the response, the server will send the above data to
+      <a href="https://eoitnqeyosaiq64.m.pipedream.net" target="_blank">
+        https://eoitnqeyosaiq64.m.pipedream.net
+      </a>
+      endpoint.<br />
+      It will the update this
+      <a
+        href="https://docs.google.com/spreadsheets/d/1Zv-rQj2r4jIt3_lCz_J7VrNJFJYT2gRadyVmIflEHCM/edit?usp=sharing"
+        target="_blank"
+      >
+        Google Sheet
+      </a>
+      with the data.
+    </p>
+  </body>
+</html>
